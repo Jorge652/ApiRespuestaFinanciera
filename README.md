@@ -1,12 +1,11 @@
 # ApiRespuestaFinanciera
 ## Ejecución
 1. Actualiza la conexión en `appsettings.json`:
-   ```json
    "ConnectionStrings": {
      "DefaultConnection": "Server=ANDRES;Database=ApiRespuesta;Trusted_Connection=True;MultipleActiveResultSets=true"
    }
 
-   Compilar y ejecutar mediante la herramienta de Visual Studio
+2.Compilar y ejecutar mediante la herramienta de Visual Studio
 
    Probar ENDPOINTS
    1. POST /api/creditos/respuesta
