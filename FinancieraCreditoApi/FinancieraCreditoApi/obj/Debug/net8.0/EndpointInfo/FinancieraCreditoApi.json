@@ -1,0 +1,111 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "FinancieraCreditoApi",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/creditos/respuesta": {
+      "post": {
+        "tags": [
+          "CreditoRespuesta"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RespuestaCreditoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RespuestaCreditoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RespuestaCreditoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/creditos/respuesta/{numeroSolicitud}": {
+      "get": {
+        "tags": [
+          "CreditoRespuesta"
+        ],
+        "parameters": [
+          {
+            "name": "numeroSolicitud",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "RespuestaCreditoRequest": {
+        "type": "object",
+        "properties": {
+          "numeroSolicitud": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "montoAprobado": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "tasa": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "observaciones": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaRespuesta": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "plazo": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "condicionesAprobacion": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

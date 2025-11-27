@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "FinancieraCreditoApi.Controllers.CreditoRespuestaController",
+    "Method": "RecibirRespuesta",
+    "RelativePath": "api/creditos/respuesta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "FinancieraCreditoApi.DTOs.RespuestaCreditoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FinancieraCreditoApi.Controllers.CreditoRespuestaController",
+    "Method": "ObtenerRespuesta",
+    "RelativePath": "api/creditos/respuesta/{numeroSolicitud}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numeroSolicitud",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
